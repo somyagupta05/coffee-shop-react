@@ -1,30 +1,31 @@
 import about from "../images/about.png";
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
-    <section class="about" id="about">
-      <h1 class="heading">
+    <section className="about" id="about">
+      <h1 className="heading">
         <span>about</span>us
       </h1>
-      <div class="row">
-        <div class="image">
-          <img src={about} height="400px" width="400px" />
+      <div className="row">
+        <div className="image">
+          <img src={about} height="400px" width="400px" alt="About us" />
         </div>
-        <div class="content">
-          <h3>What makes our coffeee special ?</h3>
+        <div className="content">
+          <h3>What makes our coffee special?</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim animi,
-            corporis itaque dolorem voluptas modi.
+            From the first rich aroma to the last comforting sip, our coffee is crafted to brighten your day and fuel your passions.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
-            placeat ipsam magnam adipisci?
+            More than just a brew, coffee is a story in every cup — of dedication, flavor, and the simple joy of slowing down.
           </p>
-          <a href="#" class="btn">
+          <Link to="/learnmore" className="btn">
             learn more
-          </a>
+          </Link>
         </div>
       </div>
     </section>
   );
 };
+
 export default About;

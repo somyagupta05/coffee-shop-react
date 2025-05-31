@@ -1,7 +1,30 @@
 // src/components/Contact.jsx
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    feedback: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Here you could also send the data to backend
+
+    // Navigate to /feedback page and pass formData as state
+    navigate("/feedback", { state: formData });
+  };
+
   return (
     <section className="contact" id="contact">
       <h1 className="heading">
@@ -17,19 +40,52 @@ const Contact = () => {
           title="Google Map"
         ></iframe>
 
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <h3>get in touch</h3>
           <div className="inputBox">
             <span className="fas fa-user"></span>
-            <input type="text" placeholder="name" />
+            <input
+              type="text"
+              placeholder="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className="inputBox">
             <span className="fas fa-envelope"></span>
-            <input type="email" placeholder="email" />
+            <input
+              type="email"
+              placeholder="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className="inputBox">
             <span className="fas fa-phone"></span>
-            <input type="number" placeholder="number" />
+            <input
+              type="number"
+              placeholder="number"
+              name="number"
+              value={formData.number}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="inputBox">
+            <span className="fas fa-comment"></span>
+            <textarea
+              placeholder="Your feedback"
+              name="feedback"
+              value={formData.feedback}
+              onChange={handleChange}
+              required
+              rows="4"
+              style={{ resize: "none" }}
+            ></textarea>
           </div>
           <input type="submit" value="contact now" className="btn" />
         </form>

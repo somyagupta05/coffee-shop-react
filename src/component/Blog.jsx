@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   return (
@@ -15,14 +16,15 @@ const Blogs = () => {
             <a href="#" className="title">
               tasty and refreshing coffee
             </a>
-            <span>by admin / 21st May 2024</span>
+            <span>by admin / 20st june 2023</span>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Quibusdam, ipsum.
             </p>
-            <a href="#" className="btn">
-              read more
-            </a>
+           <Link to="/learnmore" className="btn">
+  read more
+</Link>
+
           </div>
         </div>
 
@@ -39,9 +41,10 @@ const Blogs = () => {
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Quibusdam, ipsum.
             </p>
-            <a href="#" className="btn">
-              read more
-            </a>
+            <Link to="/learnmore" className="btn">
+  read more
+</Link>
+
           </div>
         </div>
 
@@ -53,14 +56,15 @@ const Blogs = () => {
             <a href="#" className="title">
               tasty and refreshing coffee
             </a>
-            <span>by admin / 21st May 2024</span>
+            <span>by admin / 19th Aug 2025</span>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Quibusdam, ipsum.
             </p>
-            <a href="#" className="btn">
-              read more
-            </a>
+           <Link to="/learnmore" className="btn">
+  read more
+</Link>
+
           </div>
         </div>
       </div>

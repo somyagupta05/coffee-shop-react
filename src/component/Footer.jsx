@@ -21,7 +21,7 @@ const Footer = () => {
         <a href="#blogs">blogs</a>
       </div>
       <div className="credit">
-        created by <span>mrs. somya gupta</span> | all rights reserved
+        created by <span>miss somya gupta</span> | all rights reserved
       </div>
     </section>
   );

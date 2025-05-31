@@ -4,10 +4,9 @@ const Home = () => {
       <div class="content">
         <h3>fresh coffee in the morning</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-          eligendi facilis error, cupiditate, alias
+          Coffee isn’t just a drink — it’s a daily ritual that sparks creativity, warms the soul, and brings people together.
         </p>
-        <a href="#" class="btn">
+        <a href="#menu" class="btn">
           get yours now
         </a>
       </div>
