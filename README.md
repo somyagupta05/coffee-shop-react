@@ -1,4 +1,4 @@
-link of deployed project is :  https://coffee-shop-react-omega.vercel.app/
+link of deployed project is :  https://coffee-shop-react-1wa5.vercel.app/
 
 
 # Getting Started with Create React App
